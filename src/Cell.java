@@ -31,7 +31,7 @@ public class Cell {
             return "F";
         }
         if (!isRevealed) {
-            return "■";
+            return "O";
         }
         if (isMine) {
             return "*";
