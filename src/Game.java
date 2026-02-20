@@ -14,22 +14,22 @@ public class Game {
     }
 
     public void start() {
-        System.out.println("Welcome to Minesweeper!");
+        System.out.println("Benvingut al Cerca Mines!");
 
         while (!isGameOver && !isGameWon) {
-            System.out.println("\nCurrent board:");
+            System.out.println("Taulell acutal:");
             board.printBoard(false);
 
-            System.out.println("\nWhat would you like to do?");
-            System.out.println("1. Reveal cell");
-            System.out.println("2. Toggle flag");
-            System.out.print("Choose an option (1 or 2): ");
+            System.out.println(" Selecciona el metode a activar");
+            System.out.println("1. Revelar cel.la");
+            System.out.println("2. Activar Bandera");
+            System.out.print("Selecciona (1 o 2): ");
             int option = scanner.nextInt();
 
-            System.out.print("Enter row: ");
+            System.out.print("Selecciona fila: ");
             int row = scanner.nextInt();
 
-            System.out.print("Enter column: ");
+            System.out.print("Selecciona columna: ");
             int col = scanner.nextInt();
 
             if (option == 1) {
@@ -42,7 +42,7 @@ public class Game {
             } else if (option == 2) {
                 board.toggleFlag(row, col);
             } else {
-                System.out.println("Invalid option.");
+                System.out.println("Opcio invalida.");
             }
         }
 
@@ -50,13 +50,13 @@ public class Game {
     }
 
     private void endGame() {
-        System.out.println(" --- FINAL RESULT ---");
+        System.out.println(" --- RESULTAT FINAL ---");
         board.printBoard(true);
 
         if (isGameWon) {
-            System.out.println("Congratulations! You cleared the minefield.");
+            System.out.println("Enhorabona has guanyat.");
         } else {
-            System.out.println("BOOM! You hit a mine. Game Over.");
+            System.out.println("BOOM! Has ferit una mina. Has perdut.");
         }
         scanner.close();
     }

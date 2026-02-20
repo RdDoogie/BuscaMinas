@@ -104,7 +104,7 @@ public class Board {
         System.out.println();
 
         for (int i = 0; i < rows; i++) {
-            System.out.printf("%2d ", i);
+            System.out.print("  " + i);
             for (int j = 0; j < cols; j++) {
                 System.out.print(grid[i][j].getSymbol(showAll) + " ");
             }
